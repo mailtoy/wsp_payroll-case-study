@@ -13,10 +13,6 @@ import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
 import payrollcasestudy.transactions.add.AddCommissionedEmployeeTransaction;
 
-/**
- * 
- */
-
 public class DeleteEmployeeTransactionTest
 {
 

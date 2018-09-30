@@ -17,10 +17,6 @@ import payrollcasestudy.transactions.add.AddHourlyEmployeeTransaction;
 
 import static payrollcasestudy.TestConstants.*;
 
-/**
- * 
- */
-
 public class ChangeMemberTransactionTest
 {
 

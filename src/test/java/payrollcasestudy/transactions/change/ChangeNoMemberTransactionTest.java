@@ -15,9 +15,6 @@ import payrollcasestudy.entities.affiliation.UnionAffiliation;
 import payrollcasestudy.transactions.Transaction;
 import payrollcasestudy.transactions.add.AddHourlyEmployeeTransaction;
 
-/**
- * 
- */
 
 public class ChangeNoMemberTransactionTest
 {

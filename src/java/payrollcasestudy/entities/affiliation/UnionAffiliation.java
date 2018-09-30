@@ -10,9 +10,6 @@ import payrollcasestudy.entities.ServiceCharge;
 
 import static payrollcasestudy.entities.paymentclassifications.PaymentClassification.isInPayPeriod;
 
-/**
- * Created by zhangshijie on 7/25/16.
- */
 public class UnionAffiliation
 {
 

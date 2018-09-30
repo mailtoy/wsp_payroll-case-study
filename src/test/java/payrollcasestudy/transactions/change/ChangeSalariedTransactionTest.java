@@ -17,10 +17,6 @@ import payrollcasestudy.entities.paymentschedule.MonthlyPaymentSchedule;
 import payrollcasestudy.transactions.add.AddCommissionedEmployeeTransaction;
 import payrollcasestudy.transactions.add.AddEmployeeTransaction;
 
-/**
- * 
- */
-
 public class ChangeSalariedTransactionTest
 {
 

@@ -11,10 +11,6 @@ import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
 import payrollcasestudy.transactions.add.AddHourlyEmployeeTransaction;
 
-/**
- * 
- */
-
 public class ChangeNameTransactionTest
 {
 
