@@ -14,7 +14,6 @@ import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.paymentclassifications.CommissionedClassification;
 import payrollcasestudy.entities.paymentclassifications.PaymentClassification;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.entities.paymentschedule.BiWeeklyPaymentSchedule;
 import payrollcasestudy.transactions.Transaction;
 
@@ -29,7 +28,7 @@ public class AddCommissionedEmployeeTransactionTest
 	{
 		int employeeId = 1;
 		Transaction addEmployeeTransaction = new AddCommissionedEmployeeTransaction(
-				employeeId, "Michael", "Home", new HoldMethod( ), 200.0, 20.0 );
+				employeeId, "Michael", "Home", 200.0, 20.0 );
 		addEmployeeTransaction.execute( );
 		Employee employee = database.getInstance( ).getEmployee( employeeId );
 		assertThat( employee.getName( ), is( "Michael" ) );
@@ -46,7 +45,6 @@ public class AddCommissionedEmployeeTransactionTest
 
 		assertThat( employee.getPaymentSchedule( ),
 				is( instanceOf( BiWeeklyPaymentSchedule.class ) ) );
-		assertThat( employee.getPaymentMethod( ),
-				is( instanceOf( HoldMethod.class ) ) );
+		
 	}
 }

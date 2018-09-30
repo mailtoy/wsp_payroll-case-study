@@ -16,10 +16,10 @@ public class AddHourlyEmployeeTransaction extends AddEmployeeTransaction
 	private double hourlyRate;
 
 	public AddHourlyEmployeeTransaction( int employeeId, String employeeName,
-			String employeeAddress, PaymentMethod paymentMethod,
+			String employeeAddress,
 			double hourlyRate )
 	{
-		super( employeeId, employeeName, employeeAddress, paymentMethod );
+		super( employeeId, employeeName, employeeAddress );
 		this.hourlyRate = hourlyRate;
 	}
 

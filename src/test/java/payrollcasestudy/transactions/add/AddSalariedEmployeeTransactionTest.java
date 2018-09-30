@@ -14,7 +14,6 @@ import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.affiliation.UnionAffiliation;
 import payrollcasestudy.entities.paymentclassifications.PaymentClassification;
 import payrollcasestudy.entities.paymentclassifications.SalariedClassification;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.entities.paymentschedule.MonthlyPaymentSchedule;
 import payrollcasestudy.transactions.Transaction;
 
@@ -35,7 +34,7 @@ public class AddSalariedEmployeeTransactionTest
 	{
 		int employeeId = 1;
 		Transaction addEmployeeTransaction = new AddSalariedEmployeeTransaction(
-				employeeId, "Bob", "Home", 1000.0, new HoldMethod( ) );
+				employeeId, "Bob", "Home", 1000.0 );
 		addEmployeeTransaction.execute( );
 
 		Employee employee = databaseResource.getInstance( )
@@ -52,8 +51,6 @@ public class AddSalariedEmployeeTransactionTest
 
 		assertThat( employee.getPaymentSchedule( ),
 				is( instanceOf( MonthlyPaymentSchedule.class ) ) );
-		assertThat( employee.getPaymentMethod( ),
-				is( instanceOf( HoldMethod.class ) ) );
 		assertThat( employee.getUnionAffiliation( ),
 				is( UnionAffiliation.NO_AFFILIATION ) );
 	}

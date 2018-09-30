@@ -11,7 +11,6 @@ import org.junit.Test;
 
 import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.transactions.add.AddCommissionedEmployeeTransaction;
 
 /**
@@ -29,7 +28,7 @@ public class DeleteEmployeeTransactionTest
 	{
 		int employeeId = 3;
 		AddCommissionedEmployeeTransaction addEmployeeTransaction = new AddCommissionedEmployeeTransaction(
-				employeeId, "Lance", "Home", new HoldMethod( ), 2500.0, 3.2 );
+				employeeId, "Lance", "Home", 2500.0, 3.2 );
 		addEmployeeTransaction.execute( );
 
 		Employee employee = database.getInstance( ).getEmployee( employeeId );

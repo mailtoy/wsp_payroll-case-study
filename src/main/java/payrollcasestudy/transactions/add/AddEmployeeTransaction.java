@@ -9,7 +9,7 @@ import payrollcasestudy.entities.paymentschedule.PaymentSchedule;
 import payrollcasestudy.transactions.Transaction;
 
 /**
- * Created by zhangshijie on 7/25/16.
+ * 
  */
 public abstract class AddEmployeeTransaction implements Transaction
 {
@@ -17,15 +17,13 @@ public abstract class AddEmployeeTransaction implements Transaction
 	private int employeeId;
 	private String employeeName;
 	private String employeeAddress;
-	private PaymentMethod paymentMethod;
 
 	public AddEmployeeTransaction( int employeeId, String employeeName,
-			String employeeAddress, PaymentMethod paymentMethod )
+			String employeeAddress )
 	{
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 		this.employeeAddress = employeeAddress;
-		this.paymentMethod = paymentMethod;
 	}
 
 	/**
@@ -38,7 +36,6 @@ public abstract class AddEmployeeTransaction implements Transaction
 				employeeName,
 				employeeAddress );
 		
-		employee.setPaymentMethod( paymentMethod );
 		PaymentClassification paymentClassification = getPaymentClassification( );
 		employee.setPaymentClassification( paymentClassification );
 		PaymentSchedule paymentSchedule = getPaymentSchedule( );

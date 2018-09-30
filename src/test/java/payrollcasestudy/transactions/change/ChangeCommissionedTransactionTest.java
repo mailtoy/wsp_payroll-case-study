@@ -13,7 +13,6 @@ import org.junit.Test;
 import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.paymentclassifications.CommissionedClassification;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.entities.paymentschedule.MonthlyPaymentSchedule;
 import payrollcasestudy.transactions.add.AddEmployeeTransaction;
 import payrollcasestudy.transactions.add.AddHourlyEmployeeTransaction;
@@ -33,7 +32,7 @@ public class ChangeCommissionedTransactionTest
 	{
 		int employeeId = 3;
 		AddEmployeeTransaction addEmployeeTransaction = new AddHourlyEmployeeTransaction(
-				employeeId, "Lance", "Home", new HoldMethod( ), 24.3 );
+				employeeId, "Lance", "Home", 24.3 );
 		addEmployeeTransaction.execute( );
 
 		ChangeCommissionedTransaction changeCommissionedTransaction = new ChangeCommissionedTransaction(

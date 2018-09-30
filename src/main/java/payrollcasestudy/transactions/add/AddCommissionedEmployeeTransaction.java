@@ -17,11 +17,11 @@ public class AddCommissionedEmployeeTransaction extends AddEmployeeTransaction
 	private double commissionRate;
 
 	public AddCommissionedEmployeeTransaction( int employeeId,
-			String employeeName, String employeeAddress,
-			PaymentMethod paymentMethod, double monthlySalary,
+			String employeeName, String employeeAddress
+			, double monthlySalary,
 			double commissionRate )
 	{
-		super( employeeId, employeeName, employeeAddress, paymentMethod );
+		super( employeeId, employeeName, employeeAddress );
 		this.monthlySalary = monthlySalary;
 		this.commissionRate = commissionRate;
 	}

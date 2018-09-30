@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.transactions.add.AddHourlyEmployeeTransaction;
 
 /**
@@ -27,7 +26,7 @@ public class ChangeAddressTransactionTest
 	{
 		int employeeId = 2;
 		AddHourlyEmployeeTransaction addEmployeeTransaction = new AddHourlyEmployeeTransaction(
-				employeeId, "Bill", "Home", new HoldMethod( ), 15.25 );
+				employeeId, "Bill", "Home", 15.25 );
 		addEmployeeTransaction.execute( );
 
 		ChangeAddressTransaction changeAddressTransaction = new ChangeAddressTransaction(

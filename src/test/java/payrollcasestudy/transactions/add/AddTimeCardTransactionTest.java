@@ -17,7 +17,6 @@ import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.TimeCard;
 import payrollcasestudy.entities.paymentclassifications.HourlyClassification;
 import payrollcasestudy.entities.paymentclassifications.PaymentClassification;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.transactions.Transaction;
 
 public class AddTimeCardTransactionTest
@@ -31,7 +30,7 @@ public class AddTimeCardTransactionTest
 	{
 		int employeeId = 2;
 		AddHourlyEmployeeTransaction addHourlyEmployee = new AddHourlyEmployeeTransaction(
-				employeeId, "Billy", "Home", new HoldMethod( ), 15.25 );
+				employeeId, "Billy", "Home", 15.25 );
 		addHourlyEmployee.execute( );
 
 		Calendar date = new GregorianCalendar( 2001, 10, 31 );

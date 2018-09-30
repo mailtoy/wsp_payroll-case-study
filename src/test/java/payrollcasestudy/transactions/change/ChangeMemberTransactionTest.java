@@ -12,7 +12,6 @@ import org.junit.Test;
 import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.affiliation.UnionAffiliation;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.transactions.add.AddEmployeeTransaction;
 import payrollcasestudy.transactions.add.AddHourlyEmployeeTransaction;
 
@@ -34,7 +33,7 @@ public class ChangeMemberTransactionTest
 		int employeeId = 2;
 		int memberId = 7734;
 		AddEmployeeTransaction addEmployeeTransaction = new AddHourlyEmployeeTransaction(
-				employeeId, "Bill", "Home", new HoldMethod( ), 15.25 );
+				employeeId, "Bill", "Home", 15.25 );
 		addEmployeeTransaction.execute( );
 
 		ChangeMemberTransaction changeMemberTransaction = new ChangeMemberTransaction(

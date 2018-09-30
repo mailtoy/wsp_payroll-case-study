@@ -17,7 +17,6 @@ import payrollcasestudy.DatabaseResource;
 import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.ServiceCharge;
 import payrollcasestudy.entities.affiliation.UnionAffiliation;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.transactions.Transaction;
 
 /**
@@ -35,7 +34,7 @@ public class AddServiceChargeTransactionTest
 	{
 		int employeeId = 2;
 		Transaction addEmployeeTransaction = new AddHourlyEmployeeTransaction(
-				employeeId, "Bill", "Home", new HoldMethod( ), 15.25 );
+				employeeId, "Bill", "Home", 15.25 );
 		addEmployeeTransaction.execute( );
 
 		Employee employee = database.getInstance( ).getEmployee( employeeId );

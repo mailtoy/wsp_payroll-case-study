@@ -18,7 +18,6 @@ import payrollcasestudy.entities.Employee;
 import payrollcasestudy.entities.SalesReceipt;
 import payrollcasestudy.entities.paymentclassifications.CommissionedClassification;
 import payrollcasestudy.entities.paymentclassifications.PaymentClassification;
-import payrollcasestudy.entities.paymentmethods.HoldMethod;
 import payrollcasestudy.transactions.Transaction;
 
 /**
@@ -36,7 +35,7 @@ public class AddSalesReceiptTransactionTest
 	{
 		int employeeId = 2;
 		AddCommissionedEmployeeTransaction addCommissionedEmployee = new AddCommissionedEmployeeTransaction(
-				employeeId, "Bill", "Home", new HoldMethod( ), 15.25, 0.5 );
+				employeeId, "Bill", "Home", 15.25, 0.5 );
 		addCommissionedEmployee.execute( );
 
 		Calendar date = new GregorianCalendar( 2001, 11, 31 );
